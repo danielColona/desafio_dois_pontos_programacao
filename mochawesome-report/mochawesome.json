@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-28T23:00:04.881Z",
+    "end": "2026-05-28T23:00:04.918Z",
+    "duration": 37,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "427b7d35-08fc-4b7b-8049-b5a3e7b9cbfa",
+      "title": "",
+      "fullFile": "C:\\projects\\desafio_dois_pontos_programacao\\test\\gestaoSite.test.js",
+      "file": "\\test\\gestaoSite.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0831abed-21f2-4fd9-ae78-a8c7e0b78299",
+          "title": "Teste de autenticação de usuário",
+          "fullFile": "C:\\projects\\desafio_dois_pontos_programacao\\test\\gestaoSite.test.js",
+          "file": "\\test\\gestaoSite.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve autenticar o usuário com sucesso",
+              "fullTitle": "Teste de autenticação de usuário Deve autenticar o usuário com sucesso",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Arrange\nconst email = 'danielcolona@gmail.com'\nconst senha = '12345678'\n//Act        \nconst resultado = autenticarUsuario(email, senha);\n//Assert    \nassert.equal(resultado, 'Login realizado com sucesso');",
+              "err": {},
+              "uuid": "344c5351-4a23-4011-894c-5790862b898b",
+              "parentUUID": "0831abed-21f2-4fd9-ae78-a8c7e0b78299",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve retornar mensagem de credencial expirada",
+              "fullTitle": "Teste de autenticação de usuário Deve retornar mensagem de credencial expirada",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Arrange\nconst email = 'anasouza@gmail.com'\nconst senha = '44332211'\n//Act\nconst resultado = autenticarUsuario(email, senha);\n//Assert\nassert.equal(resultado, 'Renove suas credenciais');",
+              "err": {},
+              "uuid": "7c707ee8-a251-4790-b8a1-7539c446fe91",
+              "parentUUID": "0831abed-21f2-4fd9-ae78-a8c7e0b78299",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve retornar mensagem de usuário não encontrado",
+              "fullTitle": "Teste de autenticação de usuário Deve retornar mensagem de usuário não encontrado",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Arrange\nconst email = 'usuariodesconhecido@gmail.com'\nconst senha = '12345678'\n//Act\nconst resultado = autenticarUsuario(email, senha);\n//Assert\nassert.equal(resultado, 'Usuário não encontrado');",
+              "err": {},
+              "uuid": "7c8a7b0a-db4b-4925-9f23-126d54a1f6b7",
+              "parentUUID": "0831abed-21f2-4fd9-ae78-a8c7e0b78299",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve retornar mensagem de senha incorreta",
+              "fullTitle": "Teste de autenticação de usuário Deve retornar mensagem de senha incorreta",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Arrange\nconst email = 'danielcolona@gmail.com'\nconst senha = '87654321'\n//Act\nconst resultado = autenticarUsuario(email, senha);\n//Assert\nassert.equal(resultado, 'Senha incorreta para o email informado');",
+              "err": {},
+              "uuid": "c462a434-080f-40d6-88a7-3fdf183feaa1",
+              "parentUUID": "0831abed-21f2-4fd9-ae78-a8c7e0b78299",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "344c5351-4a23-4011-894c-5790862b898b",
+            "7c707ee8-a251-4790-b8a1-7539c446fe91",
+            "7c8a7b0a-db4b-4925-9f23-126d54a1f6b7",
+            "c462a434-080f-40d6-88a7-3fdf183feaa1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.6"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
