@@ -44,5 +44,21 @@ describe('Teste de autenticação de usuário', function() {
         const resultado = autenticarUsuario(email, senha);
         //Assert
         assert.equal(resultado, 'Senha incorreta para o email informado');
-    })  
+    })
+
+    it('Deve lançar erro quando email ou senha estão vazios', function() {
+        //Arrange
+        const email = ''
+        const senha = '12345678'
+        //Act & Assert
+        assert.throws(() => autenticarUsuario(email, senha), Error, 'Por favor, preencha corretamente os campos de email e senha')
+    })
+
+    it('Deve lançar erro quando email é inválido (sem @)', function() {
+        //Arrange
+        const email = 'emailsemarroba.com'
+        const senha = '12345678'
+        //Act & Assert
+        assert.throws(() => autenticarUsuario(email, senha), Error, 'Por favor, informe um email válido')
+    })
 })

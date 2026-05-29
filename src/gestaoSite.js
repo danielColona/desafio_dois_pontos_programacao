@@ -28,7 +28,12 @@ const usuarios = [
 console.log(usuarios)
 
 export function autenticarUsuario(email, senha) {
-
+    if(!email || !senha) {
+        throw new Error('Por favor, preencha corretamente os campos de email e senha')
+    }
+    if(email.indexOf('@') == -1) {
+        throw new Error('Por favor, informe um email válido')
+    }
     for(let i = 0; i < usuarios.length; i++) {
         if(usuarios[i].email == email) {
             if(usuarios[i].senha == senha) {
