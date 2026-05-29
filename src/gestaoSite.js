@@ -45,4 +45,8 @@ export function autenticarUsuario(email, senha) {
     return 'Usuário não encontrado'
 }
 
-console.log(autenticarUsuario('joaopereira@gmail.com', '11223344'))
+console.log(autenticarUsuario('joaopereira@gmail.com', '11223344')) //teste função de autenticação
+
+for(let i = 0; i < usuarios.length; i++) { //lista de emails dos usuários
+    console.log(usuarios[i].email)
+}   
